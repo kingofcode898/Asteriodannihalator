@@ -14,9 +14,6 @@ public class PlayerMovement : MonoBehaviour
 
          rb = GetComponent<Rigidbody>(); //rb equals the rigidbody on the player
       
-
-
-
     }
     // Update is called once per frame
     void Update()
