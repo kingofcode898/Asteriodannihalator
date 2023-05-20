@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
+    void OnCollisionEnter(Collision collision)
+    {
+        Destroy(this.GameObject)
+    }
 }
 
