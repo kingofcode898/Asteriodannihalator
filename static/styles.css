@@ -97,7 +97,27 @@ img {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px
 }
- #question-text{
+ #question-one{
+    margin-left: 30px;
+    margin-right: 175px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px
+ }
+
+ #question-two{
+    margin-left: 30px;
+    margin-right: 175px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px
+ }
+
+ #question-three{
     margin-left: 30px;
     margin-right: 175px;
     margin-top: 20px;
