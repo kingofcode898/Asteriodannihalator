@@ -1,0 +1,32 @@
+     public GameObject spawnObject;
+     public Vector3 spawnPoint;
+     public int maxX = -270;
+     public int timeTilNextSpawn = 3;
+     int x = 0;
+     float timer = 0;
+ 
+     void Start()
+     {
+         timer = 0;
+         spawnPoint.x = x;
+     }
+ 
+     private void Update()
+     {
+         timer += Time.deltaTime;
+         Spawn();
+     }
+ 
+     void Spawn()
+     {
+         if (timer >= timeTilNextSpawn)
+         {
+             x = Random.Range(-20, maxX);
+             y = Random.Range(4,128);
+             spawnPoint.x = x;
+             spawnPoint.y = y; 
+
+             Instantiate(spawnObject, spawnPoint, Quaternion.identity);
+             timer = 0;
+         }
+     }
