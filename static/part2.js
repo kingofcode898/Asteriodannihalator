@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     let correct_image = "https://static.vecteezy.com/system/resources/thumbnails/011/148/560/small/right-and-wrong-vector-design-illustration-isolated-on-transparent-background-free-png.png"
     let incorrect_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_X.svg/2048px-Red_X.svg.png"
     
-    let score = 0
-    //let win_message = "Good Job! Thanks for playing!"
-    //let lose_message = "Nice Try! Replay the game to learn these facts."
+    var score = 0;
 
     let button_one = document.getElementById("enter-button-one");
     let answer_one = document.getElementById("answer-one");
@@ -17,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         let result_display = document.createElement('img')
         if (answer_one == "JUPITER") {
             result_display.src = correct_image
+            score = score + 1
         }
         else{
             result_display.src = incorrect_image
@@ -35,6 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         let result_display = document.createElement('img')
         if (answer_two == "NEPTUNE") {
             result_display.src = correct_image
+            score = score + 1
         }
         else{
             result_display.src = incorrect_image
@@ -51,22 +51,25 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log(answer_three)
 
         let result_display = document.createElement('img')
-        if (answer_two == "VENUS") {
+        if (answer_three == "VENUS") {
             result_display.src = correct_image
+            score = score + 1
         }
         else{
             result_display.src = incorrect_image
         }
         document.getElementById("question-three").appendChild(result_display);
     })
+    
+    console.log(score)
 
     if (score == 3){
-        let score_display = document.createElement('div');
+        let score_display = document.getElementById("score-display");
         score_display.textContent = "Good Job! Thanks for playing!";
     }
-    else (score < 3){
-        let score_display = document.createElement('div');
-        score_display.textContent = "Nice Try! Replay the game to learn these facts.";
+    else if (score < 3){
+        let score_display = document.getElementById("score-display");
+        score_display.textContent = "Nice Try! Replay the game to learn the answers.";
     }
 });
 

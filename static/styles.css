@@ -126,3 +126,13 @@ img {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px
  }
+
+ #score-display{
+    margin-left: 30px;
+    margin-right: 175px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px
+ }
