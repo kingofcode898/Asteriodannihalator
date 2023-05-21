@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     let answer_one = document.getElementById("answer-one");
     button_one.addEventListener("click", async function(event){
         event.preventDefault()
-        answer_one = answer_one.value
-        answer_one = answer_one.toUpperCase()
-        console.log(answer_one)
+        check_one = answer_one.value;
+        check_one = check_one.toUpperCase();
+        console.log(check_one)
 
         let result_display = document.createElement('img')
-        if (answer_one == "JUPITER") {
+        if (check_one == "JUPITER") {
             result_display.src = correct_image
             score = score + 1
         }
@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     let answer_two = document.getElementById("answer-two");
     button_two.addEventListener("click", async function(event){
         event.preventDefault()
-        answer_two = answer_two.value
-        answer_two = answer_two.toUpperCase()
-        console.log(answer_two)
+        check_two = answer_two.value
+        check_two = check_two.toUpperCase()
+        console.log(check_two)
 
         let result_display = document.createElement('img')
-        if (answer_two == "NEPTUNE") {
+        if (check_two == "NEPTUNE") {
             result_display.src = correct_image
             score = score + 1
         }
@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     let answer_three = document.getElementById("answer-three");
     button_three.addEventListener("click", async function(event){
         event.preventDefault()
-        answer_three = answer_three.value
-        answer_three = answer_three.toUpperCase()
-        console.log(answer_three)
+        check_three = answer_three.value
+        check_three = check_three.toUpperCase()
+        console.log(check_three)
 
         let result_display = document.createElement('img')
-        if (answer_three == "VENUS") {
+        if (check_three == "VENUS") {
             result_display.src = correct_image
             score = score + 1
         }
@@ -72,5 +72,3 @@ document.addEventListener("DOMContentLoaded", async function () {
         score_display.textContent = "Nice Try! Replay the game to learn the answers.";
     }
 });
-
-
