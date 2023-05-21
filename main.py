@@ -7,7 +7,7 @@ from fastapi.templating import Jinja2Templates
 
 
 app = FastAPI()
-app.mount("/home", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
@@ -17,4 +17,5 @@ def read_root(request: Request):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=5000, log_level="info")
+    uvicorn.run(app, host="localhost", port=5000, log_level="info", reload = true)
+
